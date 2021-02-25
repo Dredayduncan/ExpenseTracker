@@ -1,0 +1,17 @@
+.error-border {
+    border: 2px solid red;
+}
+
+.success-border {
+    border: 2px solid green;
+}
+
+.success-block-message {
+    color: green;
+    font-size: 12px;
+}
+
+.error-block-message {
+    color: red;
+    font-size: 12px;
+}

@@ -23,11 +23,11 @@
             <p class="mb-4"><em></em></p>
 
             
-            <div class="row no-gutters"><div id="error-block-uname" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
+             <div class="row no-gutters"><div id="error-block-email" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
               <div class="form-group row no-gutters mb-4">
-                  <label class="col-md-4 col-form-label text-left " for="uname">Username:</label>
+                  <label class="col-md-4 col-form-label text-left" for="email">Email address:</label>
                   <div class="col-md-8">
-                        <input  type="text" id="uname" name="uname" class="form-control">
+                      <input type="email" id="email" name="email" class="form-control">
                   </div>
               </div>
 

@@ -16,12 +16,28 @@
 
     <div class="justify-content-center d-flex w-100 p-3 " >
         
-        <form class=" text-center bg-white mt-5 border border-light p-5 shadow-lg rounded" style="width: 35%;" action="#" method="POST" id="Sign-up-form">
+        <form class=" text-center bg-white mt-5 border border-light p-5 shadow-lg rounded" style="width: 35%;"  method="POST" id="Sign-up-form">
             
            
             
             <p class="h4 mb-4">Sign Up</p>
             <p class="mb-4"><em></em></p>
+
+            <div class="row no-gutters"><div id="error-block-fname" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
+              <div class="form-group row no-gutters mb-4">
+                  <label class="col-md-4 col-form-label text-left " for="fname">First Name:</label>
+                  <div class="col-md-8">
+                        <input  type="text" id="fname" name="fname" class="form-control">
+                  </div>
+              </div>
+
+              <div class="row no-gutters"><div id="error-block-lname" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
+              <div class="form-group row no-gutters mb-4">
+                  <label class="col-md-4 col-form-label text-left " for="lname">Last Name:</label>
+                  <div class="col-md-8">
+                        <input  type="text" id="lname" name="lname" class="form-control">
+                  </div>
+              </div>
 
             
             <div class="row no-gutters"><div id="error-block-uname" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
@@ -29,6 +45,14 @@
                   <label class="col-md-4 col-form-label text-left " for="uname">Username:</label>
                   <div class="col-md-8">
                         <input  type="text" id="uname" name="uname" class="form-control">
+                  </div>
+              </div>
+
+              <div class="row no-gutters"><div id="error-block-number" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
+              <div class="form-group row no-gutters mb-4">
+                  <label class="col-md-4 col-form-label text-left " for="number">Phone Number:</label>
+                  <div class="col-md-8">
+                        <input  type="text" id="number" name="number" class="form-control">
                   </div>
               </div>
 
@@ -40,9 +64,13 @@
                   </div>
               </div>
 
-            
-           
-           
+              <div class="row no-gutters"><div id="error-block-limit" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
+              <div class="form-group row no-gutters mb-4">
+                  <label class="col-md-4 col-form-label text-left" for="limit">Daily Limit:</label>
+                  <div class="col-md-8">
+                      <input type="number" id="limit" name="limit" class="form-control">
+                  </div>
+              </div>
 
             
               <div class="row no-gutters"><div id="error-block-password" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
@@ -71,7 +99,7 @@
 
             <div class="d-flex mb-4 ml-2">
                
-              <button class="btn btn-success btn-block btn-info my-4 mx-auto" style="width: 150px;" name="login" type="submit">Sign in</button>
+              <button class="btn btn-success btn-block btn-info my-4 mx-auto" style="width: 150px;" name="login" type="submit">Sign up</button>
           </div>
             
             <p>Already have a account ? Click <a class="a" href="LogIn.php">here</a> to sign in now!</p>

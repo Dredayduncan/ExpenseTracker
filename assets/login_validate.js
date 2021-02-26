@@ -10,18 +10,30 @@ const password = form.elements["pword"];
 
 const error_email = document.getElementById('error-block-email');
 const error_password = document.getElementById('error-block-password');
+const error_password_strength = document.getElementById('error-block-password');
 
-// Display message if login fails
-// if (Email.dataset.success == 0) {
+function onChange() {
 
-//     Username.classList.add('error-border');
-//     password.classList.add('error-border');
-    
+    if (error_password_strength.hasChildNodes()) {
+        error_password_strength.innerHTML = "";
+    }
 
-//     let error_text = document.createElement('P');
-//     error_text.innerText = 'Incorrect email, password or username';
-//     error_email.appendChild(error_text);
-// }
+    // Regular expression for a strong password
+    let strongPass = /(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.{8,})/;
+
+    if(password.value.match(strongPass)){
+        password.classList.add("success-border");        
+    } else {
+
+        password.classList.add("error-border");
+
+        let error_text = document.createElement("P");
+        error_text.innerText = " Incorrect password";
+        error_password_strength.appendChild(error_text);
+    }
+}
+
+password.addEventListener('keypress', onChange);
 
 
 function onSubmit(event){
@@ -41,7 +53,7 @@ function onSubmit(event){
         Email.classList.add("error-border");
 
         let error_text = document.createElement("P");
-        error_text.innerText = "Enter your Username";
+        error_text.innerText = "Enter your Email";
         error_email.appendChild(error_text);
 
         hasError = true;

@@ -1,4 +1,4 @@
-console.log("first line");
+
 const form = document.getElementById('Sign-up-form'); // get the form
 
 // Get all values from form input
@@ -11,7 +11,7 @@ const Limit= form.elements['limit'];
 const password = form.elements["pword"];
 const password2 = form.elements["pword2"];
 
-console.log("you variables ?");
+
 // Get all error blocks
 const error_fname= document.getElementById('error-block-fname');
 const error_lname= document.getElementById('error-block-lname');
@@ -23,7 +23,7 @@ const error_password = document.getElementById('error-block-password');
 const error_password_strength = document.getElementById('error-block-password');
 const error_repass = document.getElementById('error-block-repassword');
 
-console.log("you errors ?");
+
 
 function onChange() {
 
@@ -50,7 +50,7 @@ password.addEventListener('keypress', onChange);
 
 
 
-console.log("you submit ?");
+
 
 function onSubmit(event){
 

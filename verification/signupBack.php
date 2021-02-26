@@ -39,7 +39,7 @@
             $_SESSION['email'] = $email;
             $_SESSION['pass'] = $password;
 
-            header("Location: ../main/dashboard.php?error=Account has been successfully created!");
+            header("Location: ../login.php?notice=Account has been successfully created!");
         }
 
         die("ERROR: Could not able to execute $sql. " . mysqli_error($conn));

@@ -3,11 +3,11 @@
     include "config.php";
 
     //Get Login Data
-    $email = $_POST['uname'];
+    $email = $_POST['email'];
     $pass = $_POST['pword'];
 
     // write query
-    $sql = "SELECT * FROM Person WHERE email='".$email."'";
+    $sql = "SELECT * FROM user WHERE email='".$email."'";
 
     // execute query
     $result = mysqli_query($conn, $sql);
@@ -17,7 +17,7 @@
         session_start();
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $password;
-        header("Location: ../index.php?error=Email does not exist!");
+        header("Location: login.php?error=Email does not exist!");
         die;
     }
 
@@ -40,7 +40,7 @@
         session_start();
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $password;
-        header("Location: ../index.php?error=Your Password is Incorrect!");
+        header("Location: login.php?error=Your Password is Incorrect!");
         die;
     }
 

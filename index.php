@@ -108,8 +108,8 @@ ul li.active a{
       </div>
 
       <div class=" button justify-content-around">
-          <a href="LogIn.php" class="btn">Log In</a>
-          <a href="SignUp.php" class="btn">Sign Up</a>
+          <a href="verification/LogIn.php" class="btn">Log In</a>
+          <a href="verification/SignUp.php" class="btn">Sign Up</a>
           
 
       </div>

@@ -1,75 +1,119 @@
-<?php
-    
-    //Establish Database Connection
-    include "config.php";
+<!doctype html>
+<html lang="en">
+  <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    #Get form data
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
-    $user = $_POST['uname'];
-    $phone = $_POST['number'];
-    $email = $_POST['email'];
-    $password = $_POST['pword'];
-    $limit = $_POST['limit'];
-    $pass = password_hash($password, PASSWORD_DEFAULT);
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
+      <title>Sign Up</title>
+      <link href="../assets/css/style.css" type="text/css" rel="stylesheet">
+     
+  </head>
+  <body class = "container-fluid mt-5" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../assets/img/expenseimage.jpeg); height: 100vh; background-size: cover; background-position: center;" >
 
-    //Check if email exists
-    $query = "SELECT * FROM user where email='".$email."'";
-
-    // execute query
-    $result = mysqli_query($conn, $query);
-
-    //Check if email is present
-    if (mysqli_num_rows($result) != 0) {
-        header("Location: ../index.html?notice=Account has been successfully created!");
-        die;
-    }
-    else{
+    <div class="justify-content-center d-flex w-100 p-3 " >
         
+        <form class=" text-center bg-white mt-5 border border-light p-5 shadow-lg rounded" action="signupBack.php" style="width: 35%;"  method="POST" id="Sign-up-form">
+            
+           
+            
+            <p class="h4 mb-4">Sign Up</p>
+            <p class="mb-4"><em></em></p>
 
-        //Insert records to database
-        $query = "INSERT into user (firstname, lastname, username, phonenumber, email, password, dailylimit)
-                  VALUES ('$fname', '$lname', '$user', '$phone', '$email', '$pass', '$limit')";
+            <div class="row no-gutters"><div id="error-block-fname" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
+              <div class="form-group row no-gutters mb-4">
+                  <label class="col-md-4 col-form-label text-left " for="fname">First Name:</label>
+                  <div class="col-md-8">
+                        <input  type="text" id="fname" name="fname" class="form-control">
+                  </div>
+              </div>
 
-        // execute query
-        $result = mysqli_query($conn, $query);
+              <div class="row no-gutters"><div id="error-block-lname" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
+              <div class="form-group row no-gutters mb-4">
+                  <label class="col-md-4 col-form-label text-left " for="lname">Last Name:</label>
+                  <div class="col-md-8">
+                        <input  type="text" id="lname" name="lname" class="form-control">
+                  </div>
+              </div>
 
-        if ($result){
-            session_start();
-            $_SESSION['username'] = $user;
-            $_SESSION['email'] = $email;
-            $_SESSION['pass'] = $password;
+            
+            <div class="row no-gutters"><div id="error-block-uname" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
+              <div class="form-group row no-gutters mb-4">
+                  <label class="col-md-4 col-form-label text-left " for="uname">Username:</label>
+                  <div class="col-md-8">
+                        <input  type="text" id="uname" name="uname" class="form-control">
+                  </div>
+              </div>
 
-            header("Location: ../index.php?error=Email does not exist!");
-        }
+              <div class="row no-gutters"><div id="error-block-number" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
+              <div class="form-group row no-gutters mb-4">
+                  <label class="col-md-4 col-form-label text-left " for="number">Phone Number:</label>
+                  <div class="col-md-8">
+                        <input  type="text" id="number" name="number" class="form-control">
+                  </div>
+              </div>
 
-        die("ERROR: Could not able to execute $sql. " . mysqli_error($conn));
-    }
+              <div class="row no-gutters"><div id="error-block-email" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
+              <div class="form-group row no-gutters mb-4">
+                  <label class="col-md-4 col-form-label text-left" for="email">Email address:</label>
+                  <div class="col-md-8">
+                      <input type="email" id="email" name="email" class="form-control">
+                  </div>
+              </div>
+
+              <div class="row no-gutters"><div id="error-block-limit" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
+              <div class="form-group row no-gutters mb-4">
+                  <label class="col-md-4 col-form-label text-left" for="limit">Daily Limit:</label>
+                  <div class="col-md-8">
+                      <input type="number" id="limit" name="limit" class="form-control">
+                  </div>
+              </div>
+
+            
+              <div class="row no-gutters"><div id="error-block-password" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
+            <div class="form-group row no-gutters mb-4">
+                <label class="col-md-4 col-form-label text-left" for="pword">Password:</label>
+                <div class="col-md-8">
+                    <input type="password" id="pword" name="pword" class="form-control">
+                </div>
+            </div>
+
+            <div class="row no-gutters"><div id="error-block-repassword" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
+            <div class="form-group row no-gutters">
+                <label class="col-md-4 col-form-label text-left" for="spassword2">Reenter password:</label>
+                <div class="col-md-8">
+                    <input type="password" id="pword2" name="pword2" class="form-control">
+                </div>
+            </div>
+
+            
+            <!-- <div class="d-flex justify-content-end mb-4">
+                <a class="btn btn-success" href="Overview.html" role="button">Log In</a>
+               <button type="button" class="btn btn-success" name="login" type="submit">Log In</button> -->
+                
+         
+            <!-- </div> --> 
+
+            <div class="d-flex mb-4 ml-2">
+               
+              <button class="btn btn-success btn-block btn-info my-4 mx-auto" style="width: 150px;" name="login" type="submit">Sign up</button>
+          </div>
+            
+            <p>Already have a account ? Click <a class="a" href="LogIn.php">here</a> to sign in now!</p>
+            
+        </form>
+        
     
 
-    // //Get Image Upload path
-    // $targetDir = "uploads/";
-    // $fileName = basename($_FILES["file"]["name"]);
-    // $targetFilePath = $targetDir . $fileName;
-
-    // //Get file type
-    // $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
+    </div>
 
     
-
-    // //Check if file is an image and upload it to the server
-    // $allowTypes = array('jpg', 'JPG', 'png','jpeg','gif','pdf');
-    // if(in_array($fileType, $allowTypes)){
-
-    //     // Upload file to server
-    //     if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
-    //         echo "true";
-    //     }
-    //     else{
-    //         echo "false";
-    //         die;
-    //     }
-    // }
-
-?>
+      <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+      <script src = "../assets/js/signup_validate.js"></script>
+</body>
+</html>

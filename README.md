@@ -1,4 +1,4 @@
-# ExpenseTracker
+# Expense Tracker
 
 ## xPense System
 

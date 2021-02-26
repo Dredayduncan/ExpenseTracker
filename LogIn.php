@@ -47,19 +47,11 @@
 
            
 
-            
-            <!-- <div class="d-flex justify-content-end mb-4">
-                <a class="btn btn-success" href="Overview.html" role="button">Log In</a>
-               <button type="button" class="btn btn-success" name="login" type="submit">Log In</button> -->
-                
-         
-            <!-- </div> --> 
-
             <div class="d-flex justify-content-end mb-4">
               <button class="btn btn-success btn-block btn-info my-4 mx-auto "  name="login" type="submit">Log in</button>
           </div>
             
-            <p>New here ? Click <a class="a" href="SignUp.html">here</a> to sign in now!</p>
+            <p>New here ? Click <a class="a" href="SignUp.php">here</a> to sign in now!</p>
             
         </form>
         

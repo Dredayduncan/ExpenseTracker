@@ -74,7 +74,7 @@
               <button class="btn btn-success btn-block btn-info my-4 mx-auto" style="width: 150px;" name="login" type="submit">Sign in</button>
           </div>
             
-            <p>Already have a account ? Click <a class="a" href="LogIn.html">here</a> to sign in now!</p>
+            <p>Already have a account ? Click <a class="a" href="LogIn.php">here</a> to sign in now!</p>
             
         </form>
         

@@ -5,7 +5,7 @@
 
 svg:hover {
     cursor: pointer;
-    background-color: orange;
+    
 }
 
 #add-button {
@@ -16,7 +16,9 @@ svg:hover {
     
     position:relative;
     left: 85%;
+    margin-bottom: -5%;
     margin-top: 0.5%;
+    
  
 }
 
@@ -28,7 +30,9 @@ svg:hover {
     
     position:relative;
     left: 85%;
-    margin-top: 10%;
+    margin-bottom: -10%;
+    margin-top: -5%;
+    
  
 }
 
@@ -41,6 +45,4 @@ svg:hover {
 
 }
 
-.fixed {
-    position: fixed;
-}
+

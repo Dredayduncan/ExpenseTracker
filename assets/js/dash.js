@@ -43,23 +43,7 @@ $('#confirmDelete').on('click', function(){
     });
 });
 
-// Get Image input
-// function pictureInput(event){
-//     var input = document.getElementById('myFile');
 
-//     var reader = new FileReader();
-//     reader.onload = function(){
-//     var dataURL = reader.result;
-//     var output = document.getElementById('pic');
-//     output.src = dataURL;
-//     $.post('imageToText.php', function(data){
-//             console.log(data);
-//     });
-//     };
-//     reader.readAsDataURL(input.files[0]);
-
-//     return false;
-// }
 
 $('#img').change(function() {
     $('#picture').submit();

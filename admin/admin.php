@@ -34,7 +34,7 @@
     <div class="preloader">
         <div class="loader">
             <div class="loader__figure"></div>
-            <p class="loader__label">ExpenceTracker</p>
+            <p class="loader__label">xPenseTracker</p>
         </div>
     </div>
     <!-- ============================================================== -->
@@ -184,29 +184,18 @@
 
                             <div id='tab' class="table table.responsive" style="height: 650px; overflow-y: scroll;  overflow-x: hidden;">
                                 <table class="table table-hover mb-0  " width="100%" ></table>
-                            <!-- Modal delete -->
-                            <div class="modal fade" id="deleteuser" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Delete User</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                </div>
-                                <div class="modal-body">
-                                Are you sure you want to delete this user ?
-                                </div>
-                                <div class="modal-footer justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                                <button id='confirmDelete' name='confam' type="button" class="btn btn-primary">Yes</button>
-                                </div>
-                            </div>
-                            </div>
+                           
                         </div>
 
-                        <!-- Modal add user -->
-                        <div class="modal fade" id="adduser" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+
+                    </div>
+
+                    
+                </div>
+              
+
+                                            <!-- Modal add user -->
+                                            <div class="modal fade" id="adduser" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -304,10 +293,30 @@
                             </div>
                             </div>
                         </div>
+
+                           <!-- Modal delete -->
+                 <div class="modal fade" id="deleteuser" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Delete User</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                <div class="modal-body">
+                                Are you sure you want to delete this user ?
+                                </div>
+                                <div class="modal-footer justify-content-center">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                                <button id='confirmDelete' name='confam' type="button" class="btn btn-primary">Yes</button>
+                                </div>
+                            </div>
                     </div>
 
-                    
-                </div>
+                
+
+
             </div>
         </div>
 

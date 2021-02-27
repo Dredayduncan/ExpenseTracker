@@ -96,7 +96,7 @@
                   
                
 
-                <div class="row no-gutters mb-3 d-flex shadow-sm border mt-5 rounded" >
+                <div class="row no-gutters mb-3 d-flex shadow-sm border mt-3 rounded" >
                     <div class="flex-grow-1 p-2 pl-3" style="vertical-align: middle;">
                         <div class="font-weight-bolder" style="font-size:25px;">
                             <p>Restaurant and Cafe</p>
@@ -113,11 +113,11 @@
                         </div>
                     </div>
 
-                    <div class="d-flex justify-content-center align-items-center border-left" style="width:140px; border-color:var(--n-grey)">
+                    <div class="d-flex justify-content-center align-items-center border-left" style="width:140px; ">
                         <h1 class="font-weight-lighter" style="font-size:30px;">-$99.00</h1>
                         
                     </div>
-                    <div class="d-flex align-items-center justify-content-around border-left" id="util1"data-toggle="modal" data-target="#editexpense" style="width:140px; border-color:var(--n-grey)">
+                    <div class="d-flex align-items-center justify-content-around border-left" id="util1"data-toggle="modal" data-target="#editexpense" style="width:140px;">
                                         <a class="event-button "  data-toggle="tooltip" data-placement="top" title="Edit" href="?id_edit=$id">
                                             <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
@@ -127,7 +127,7 @@
                                         
                       </div>
                       
-                      <div class="d-flex align-items-center justify-content-around border-left" id="util2"  data-toggle="modal" data-target="#deleteexpense" style="width:140px; border-color:var(--n-grey)">
+                      <div class="d-flex align-items-center justify-content-around border-left" id="util2"  data-toggle="modal" data-target="#deleteexpense" style="width:140px; ">
 
                                         <a class="event-button"  data-toggle="tooltip" data-placement="top" title="Delete" href="?id_delete=$id">
                                             <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

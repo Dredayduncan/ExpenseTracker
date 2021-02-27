@@ -112,19 +112,19 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li> <a class="waves-effect waves-dark" aria-expanded="false">
-                            <i class="fa fa-user"></i><span class="hide-menu">User</span></a>
+                        <li id='user'> <a class="waves-effect waves-dark" aria-expanded="false">
+                            <i class="fa fa-user"></i><span class="hide-menu">user</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" aria-expanded="false">
+                        <li id='accountsummary'> <a class="waves-effect waves-dark" aria-expanded="false">
                             <i class="fa fa-book"></i><span class="hide-menu">accountsummary</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" aria-expanded="false">
+                        <li id='expense'> <a class="waves-effect waves-dark" aria-expanded="false">
                             <i class="fa fa-credit-card"></i><span class="hide-menu">expense</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" aria-expanded="false">
+                        <li id='income'> <a class="waves-effect waves-dark" aria-expanded="false">
                             <i class="fa fa-money"></i><span class="hide-menu">income</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" aria-expanded="false">
+                        <li id='admin'> <a class="waves-effect waves-dark" aria-expanded="false">
                             <i class="fa fa-university"></i><span class="hide-menu">admin</span></a>
                         </li>
                     </ul>
@@ -172,7 +172,7 @@
                                     <div class="container">
                                         <div class="row">
                                           <div class="col ">
-                                            <h5 class="card-title">Users' Overview</h5>
+                                            <h5 class="card-title"></h5>
                                           </div>
                                           <div class="col ">
                                             <a class="btn btn-success" href="Addnew.html" role="button" data-toggle="modal" data-target="#adduser">Add New User</a> 
@@ -183,94 +183,7 @@
                             </div>
 
                             <div id='tab' class="table table.responsive" style="height: 650px; overflow-y: scroll;  overflow-x: hidden;">
-                                <table class="table table-hover mb-0  " width="100%" >
-                                    <thead style ="position: sticky; ">
-                                        <tr>
-                                            <th class="text-center">#</th>
-                                            <th>First name</th>
-                                            <th>Last name</th>
-                                            <th>Username</th>
-                                            <th>Phone Number</th>
-                                            <th>Email</th>
-                                            <th>Password </th>
-                                            <th>Daily Limit</th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class = "border ">
-                                            <td class="text-center">1</td>
-                                            <td class="txt-oflo">Kofi</td>
-                                            <td class="txt-oflo">Asante</td>
-                                            <td class="txt-oflo">kdaddy</td>
-                                            <td class="txt-oflo">0544021943</td>
-                                            <td class="txt-oflo">kofi.asante@ashesi.edu.gh</td>
-                                            <td class="txt-oflo">*********</td>
-                                            <td class="txt-oflo text-success">$30</td>
-                                            <td class="txt-oflo"><a class="btn btn-success" data-toggle="modal" data-target="#deleteuser"  
-                                            role="button" style="background-color: #9A2005;">Remove</a>
-    
-                                            </td>
-                                        </tr>
-                                        <tr class = "border ">
-                                            <td class="text-center">1</td>
-                                            <td class="txt-oflo">Kofi</td>
-                                            <td class="txt-oflo">Asante</td>
-                                            <td class="txt-oflo">kdaddy</td>
-                                            <td class="txt-oflo">0544021943</td>
-                                            <td class="txt-oflo">kofi.asante@ashesi.edu.gh</td>
-                                            <td class="txt-oflo">*********</td>
-                                            <td class="txt-oflo text-success">$30</td>
-                                            <td class="txt-oflo"><a class="btn btn-success"  role="button" data-toggle="modal" data-target="#deleteuser"
-                                            style="background-color: #9A2005;">Remove</a>
-    
-                                            </td>
-                                        </tr>
-                                        <tr class = "border ">
-                                            <td class="text-center">1</td>
-                                            <td class="txt-oflo">Kofi</td>
-                                            <td class="txt-oflo">Asante</td>
-                                            <td class="txt-oflo">kdaddy</td>
-                                            <td class="txt-oflo">0544021943</td>
-                                            <td class="txt-oflo">kofi.asante@ashesi.edu.gh</td>
-                                            <td class="txt-oflo">*********</td>
-                                            <td class="txt-oflo text-success">$30</td>
-                                            <td class="txt-oflo"><a class="btn btn-success"  role="button"data-toggle="modal" data-target="#deleteuser"
-                                            style="background-color: #9A2005;">Remove</a>
-    
-                                            </td>
-                                        </tr>
-                                        <tr class = "border ">
-                                            <td class="text-center">1</td>
-                                            <td class="txt-oflo">Kofi</td>
-                                            <td class="txt-oflo">Asante</td>
-                                            <td class="txt-oflo">kdaddy</td>
-                                            <td class="txt-oflo">0544021943</td>
-                                            <td class="txt-oflo">kofi.asante@ashesi.edu.gh</td>
-                                            <td class="txt-oflo">*********</td>
-                                            <td class="txt-oflo text-success">$30</td>
-                                            <td class="txt-oflo"><a class="btn btn-success"  role="button" data-toggle="modal" data-target="#deleteuser"
-                                            style="background-color: #9A2005;">Remove</a>
-    
-                                            </td>
-                                        </tr>
-                                        <tr class = "border ">
-                                            <td class="text-center">1</td>
-                                            <td class="txt-oflo">Kofi</td>
-                                            <td class="txt-oflo">Asante</td>
-                                            <td class="txt-oflo">kdaddy</td>
-                                            <td class="txt-oflo">0544021943</td>
-                                            <td class="txt-oflo">kofi.asante@ashesi.edu.gh</td>
-                                            <td class="txt-oflo">*********</td>
-                                            <td class="txt-oflo text-success">$30</td>
-                                            <td class="txt-oflo"><a class="btn btn-success"  role="button" data-toggle="modal" data-target="#deleteuser" 
-                                            style="background-color: #9A2005;">Remove</a>
-    
-                                            </td>
-                                        </tr>
-                                        
-                                    </tbody>
-                                </table>
+                                <table class="table table-hover mb-0  " width="100%" ></table>
                             <!-- Modal delete -->
                             <div class="modal fade" id="deleteuser" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -420,10 +333,7 @@
     <!-- ============================================================== -->
     <!-- This page plugins -->
     <!-- ============================================================== -->
-    <!--morris JavaScript -->
-    <script src="../assets/node_modules/raphael/raphael-min.js"></script>
-    <script src="../assets/node_modules/morrisjs/morris.min.js"></script>
-    <script src="../assets/node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+
     <!--c3 JavaScript -->
     <script src="../assets/node_modules/d3/d3.min.js"></script>
     <script src="../assets/node_modules/c3-master/c3.min.js"></script>

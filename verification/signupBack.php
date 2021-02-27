@@ -39,35 +39,10 @@
             $_SESSION['email'] = $email;
             $_SESSION['pass'] = $password;
 
-            header("Location: ogin.php?notice=Account has been successfully created!");
+            header("Location: login.php?notice=Account has been successfully created!");
         }
 
         die("ERROR: Could not able to execute $sql. " . mysqli_error($conn));
     }
-    
-
-    // //Get Image Upload path
-    // $targetDir = "uploads/";
-    // $fileName = basename($_FILES["file"]["name"]);
-    // $targetFilePath = $targetDir . $fileName;
-
-    // //Get file type
-    // $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
-
-    
-
-    // //Check if file is an image and upload it to the server
-    // $allowTypes = array('jpg', 'JPG', 'png','jpeg','gif','pdf');
-    // if(in_array($fileType, $allowTypes)){
-
-    //     // Upload file to server
-    //     if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
-    //         echo "true";
-    //     }
-    //     else{
-    //         echo "false";
-    //         die;
-    //     }
-    // }
 
 ?>

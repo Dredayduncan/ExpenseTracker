@@ -50,7 +50,7 @@
                 <!-- Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="admin.php">
                         <!-- Logo icon --><b>
                             <a style="font-size: large; color:black;">xPenseTracker</a>
 
@@ -112,10 +112,21 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li> <a class="waves-effect waves-dark" href="index.html" aria-expanded="false"><i
-                                    class="fa fa-tachometer"></i><span class="hide-menu">User</span></a></li>
-
-        
+                        <li> <a class="waves-effect waves-dark" aria-expanded="false">
+                            <i class="fa fa-user"></i><span class="hide-menu">User</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" aria-expanded="false">
+                            <i class="fa fa-book"></i><span class="hide-menu">accountsummary</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" aria-expanded="false">
+                            <i class="fa fa-credit-card"></i><span class="hide-menu">expense</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" aria-expanded="false">
+                            <i class="fa fa-money"></i><span class="hide-menu">income</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" aria-expanded="false">
+                            <i class="fa fa-university"></i><span class="hide-menu">admin</span></a>
+                        </li>
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
@@ -171,7 +182,7 @@
                                 </div>
                             </div>
 
-                            <div class="table table.responsive  " style="height: 650px; overflow-y: scroll;  overflow-x: hidden;">
+                            <div id='tab' class="table table.responsive" style="height: 650px; overflow-y: scroll;  overflow-x: hidden;">
                                 <table class="table table-hover mb-0  " width="100%" >
                                     <thead style ="position: sticky; ">
                                         <tr>
@@ -258,11 +269,6 @@
                                             </td>
                                         </tr>
                                         
-                          
-                                        
-                                            
-                    
- 
                                     </tbody>
                                 </table>
                             <!-- Modal delete -->
@@ -421,8 +427,10 @@
     <!--c3 JavaScript -->
     <script src="../assets/node_modules/d3/d3.min.js"></script>
     <script src="../assets/node_modules/c3-master/c3.min.js"></script>
-    <!-- Chart JS -->
-    <script src="dist/js/dashboard1.js"></script>
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- ADMIN JS -->
+    <script src="dist/js/admin.js"></script>
 </body>
 
 </html>

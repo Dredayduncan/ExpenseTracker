@@ -20,7 +20,7 @@
 ?>
 
 
-<body>
+<body style="overflow-y: hidden;">
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,15 +78,21 @@
 
 <!-- Content with cards -->
 <!--                                              FIRST ROW                                   -->
-  <div class="container mt-4">
-      <div class="card text-center shadow rounded">
-          <div class="card-header lead bg-dark text-white font-weight-bolder">
-            Total Amount Spent
+<div class="card text-center shadow rounded container " style="max-width:64%;">
+          <div class="card-header lead bg-dark text-white font-weight-bolder container d-flex justify-content-around ">
+            <h5>Total Amount Spent</h5>
+            <h5></h5>
+            <h5>Daily Limit</h5>
           </div>
-          <div class="card-body">
-            <h5 class="card-title font-weight-lighter" style="font-size:50px;">GHS500</h5>
+          <div class="card-body d-flex justify-content-around">
+          
+            <h5 class="card-title font-weight-lighter " style="font-size:50px;">GHS500</h5>
+            <h5 class="card-title border-right border-dark" style="font-size:50px;"></h5>
+            <h6 class="card-title font-weight-lighter " style="font-size:50px;">GHS50</h6>
           </div>
       </div>
+  <div class="container mt-4 " style="height: 500px; overflow-y: scroll;  overflow-x: hidden; max-width:65%;">
+      
         
       <?php
 
@@ -101,18 +107,19 @@
         }else{
 
             while ($data = mysqli_fetch_array($result)){
-                echo '<div class="row no-gutters mb-3 d-flex shadow-sm border mt-3 rounded" >
+                echo '<div class="row no-gutters mb-3 d-flex shadow-sm border mt-3 rounded "  >
                 <div class="flex-grow-1 p-2 pl-3" style="vertical-align: middle;">
-                    <div class="font-weight-bolder" style="font-size:25px;">
-                        <p class="desc">'.$data['description'].'</p>
-                        <p class="cat" style="display: none;">'.$data['category'].'</p>
-                        <p class="meth" style="display: none;">'.$data['paymentmethod'].'</p>
+                <p class="desc font-weight-bolder mb-3" style="font-size:25px;">'.$data['description'].'</p>
+                    <div class="font-weight-bolder d-flex justify-content-around " style="font-size:25px;">
+                        <p class="cat font-weight-lighter font-italic " style="font-size:20px;"> Category: '.$data['category'].'</p>
+                        <p class="meth font-weight-lighter font-italic" style="font-size:20px;">Payment: '.$data['paymentmethod'].'</p>
                     </div>
                     <div>
                         <div class="container-fluid justify-content-around ">
                             <div class="row ">
                               <div class="col-sm">
-                                '.$data['timestamp'].'
+                              <div class="card-footer bg-transparent border-success">'.$data['timestamp'].'</div>
+                                
                               </div>
                               
                             </div>
@@ -120,7 +127,7 @@
                     </div>
                 </div>
 
-                <div class="d-flex justify-content-center align-items-center border-left" style="width:140px; border-color:var(--n-grey)">
+                <div class="d-flex justify-content-center align-items-center border-left" style="width:250px; border-color:var(--n-grey)">
                     <h1 class="font-weight-lighter" style="font-size:30px;">-GHS'.$data['amount'].'</h1>
                     
                 </div>
@@ -150,7 +157,7 @@
       ?>
   </div>
              
-  <div id="scan-button" class="fixed d-flex justify-content-center align-items-center shadow bg-warning" data-toggle="modal" data-target="#scanexpense">
+  <div id="scan-button" class="fixed-bottom d-flex justify-content-center align-items-center shadow bg-warning" data-toggle="modal" data-target="#scanexpense">
 
   <span>
   <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-upc-scan" viewBox="0 0 16 16">
@@ -159,7 +166,7 @@
   </span>
   </div>
 
-  <div id="add-button" class="fixed d-flex justify-content-center align-items-center shadow bg-warning" data-toggle="modal" data-target="#addexpense">
+  <div id="add-button" class="fixed-bottom d-flex justify-content-center align-items-center shadow bg-warning" data-toggle="modal" data-target="#addexpense">
 
   <span>
     <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

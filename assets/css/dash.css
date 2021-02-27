@@ -3,6 +3,11 @@
     
 }
 
+svg:hover {
+    cursor: pointer;
+    
+}
+
 #add-button {
     width: 70px;
     height: 70px;
@@ -11,7 +16,9 @@
     
     position:relative;
     left: 85%;
+    margin-bottom: -5%;
     margin-top: 0.5%;
+    
  
 }
 
@@ -23,7 +30,9 @@
     
     position:relative;
     left: 85%;
-    margin-top: 10%;
+    margin-bottom: -10%;
+    margin-top: -5%;
+    
  
 }
 
@@ -35,3 +44,5 @@
     border:none; 
 
 }
+
+

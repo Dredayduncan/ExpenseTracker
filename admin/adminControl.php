@@ -59,7 +59,7 @@
                         <td class="txt-oflo">'.$data['username'].'</td>
                         <td class="txt-oflo">'.$data['phonenumber'].'</td>
                         <td class="txt-oflo">'.$data['email'].'</td>
-                        <td class="txt-oflo">'.$data['password'].'</td>
+                        <td class="txt-oflo text-break">'.$data['password'].'</td>
                         <td class="txt-oflo text-success">GHS'.$data['dailylimit'].'</td>
                         <td class="txt-oflo"><a class="btn btn-success" data-toggle="modal" data-target="#deleteuser"  
                         role="button" style="background-color: #9A2005;">Remove</a>

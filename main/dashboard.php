@@ -17,6 +17,9 @@
   include "../verification/config.php";
 
   session_start();
+
+  // Track the amount spent
+  $totalSpent = 0;
 ?>
 
 
@@ -86,9 +89,9 @@
           </div>
           <div class="card-body d-flex justify-content-around">
           
-            <h5 class="card-title font-weight-lighter " style="font-size:50px;">GHS500</h5>
+            <h5 id="total" class="card-title font-weight-lighter " style="font-size:50px;"></h5>
             <h5 class="card-title border-right border-dark" style="font-size:50px;"></h5>
-            <h6 class="card-title font-weight-lighter " style="font-size:50px;">GHS50</h6>
+            <h6 id="dailylimit" class="card-title font-weight-lighter " style="font-size:50px;">GHS<?php echo $_SESSION['lim']; ?></h6>
           </div>
       </div>
   <div class="container mt-4 " style="height: 500px; overflow-y: scroll;  overflow-x: hidden; max-width:65%;">
@@ -107,6 +110,7 @@
         }else{
 
             while ($data = mysqli_fetch_array($result)){
+                $totalSpent += $data['amount'];
                 echo '<div class="row no-gutters mb-3 d-flex shadow-sm border mt-3 rounded "  >
                 <div class="flex-grow-1 p-2 pl-3" style="vertical-align: middle;">
                 <p class="desc font-weight-bolder mb-3" style="font-size:25px;">'.$data['description'].'</p>
@@ -128,7 +132,7 @@
                 </div>
 
                 <div class="d-flex justify-content-center align-items-center border-left" style="width:250px; border-color:var(--n-grey)">
-                    <h1 class="font-weight-lighter" style="font-size:30px;">-GHS'.$data['amount'].'</h1>
+                    <h1 class="font-weight-lighter" style="font-size:30px;">GHS'.$data['amount'].'</h1>
                     
                 </div>
                 <div class="d-flex align-items-center justify-content-around border-left util1" id="util1" data-toggle="modal" data-target="#editexpense" style="width:140px; border-color:var(--n-grey)">
@@ -152,6 +156,9 @@
                 
             </div>';
             }
+
+            // Update total amount
+            echo "<script> document.getElementById('total').innerHTML = 'GHS' + $totalSpent; </script>";
         }
 
       ?>

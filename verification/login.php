@@ -51,7 +51,7 @@
               <button class="btn btn-success btn-block btn-info my-4 mx-auto "  name="login" type="submit">Log in</button>
           </div>
             
-            <p>New here ? Click <a class="a" href="SignUp.php">here</a> to sign in now!</p>
+            <p>New here ? Click <a class="a" href="SignUp.php">here</a> to sign up now!</p>
             
         </form>
         

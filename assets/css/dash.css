@@ -9,11 +9,29 @@
 
     border-radius: 50%;
     
-    
-    right: 3%;
-    bottom: 8%;
+    position:relative;
+    left: 85%;
+    margin-top: 0.5%;
+ 
 }
 
-#add-button:hover {
-        background-color:#FFFFFF ;
+#scan-button {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+    
+    position:relative;
+    left: 85%;
+    margin-top: 10%;
+ 
+}
+
+.username{
+    background:transparent ; 
+    color:#ffffff; 
+    font-size:20px; 
+    font-family:'Archivo black'; 
+    border:none; 
+
 }

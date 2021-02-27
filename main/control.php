@@ -57,7 +57,7 @@
     elseif (isset($_POST['edit'])){
         //Insert records to database
         $query = "UPDATE expense SET amount ='".$amount."', category = '".$cat."', paymentmethod = '".$payment."',
-        description = '".$desc."' WHERE ID = '".$id."'";
+        description = '".$desc."' WHERE ID = '".$_POST['expenseID']."'";
 
         // execute query
         $result = mysqli_query($conn, $query);

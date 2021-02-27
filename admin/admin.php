@@ -175,7 +175,7 @@
                                             <h5 class="card-title"></h5>
                                           </div>
                                           <div class="col ">
-                                            <a class="btn btn-success" href="Addnew.html" role="button" data-toggle="modal" data-target="#adduser">Add New User</a> 
+                                            <a class="btn btn-success" role="button" data-toggle="modal" data-target="#adduser">Add New User</a> 
                                           </div>
                                         </div>
                                     </div>

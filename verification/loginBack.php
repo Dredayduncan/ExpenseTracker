@@ -29,7 +29,7 @@
         //Make necessary info globally accessible
         session_start();
         $_SESSION['logEmail'] = $email;
-        $_SESSION['logUname'] = $email;
+        $_SESSION['logUname'] = $user['username'];
         $_SESSION['id'] = $user['userID'];
 
         //Reroute to email page

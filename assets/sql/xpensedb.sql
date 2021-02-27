@@ -26,21 +26,6 @@ USE `xpensedb`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `accountsummary`
---
-
-CREATE TABLE IF NOT EXISTS `accountsummary` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `income` decimal(10,2) NOT NULL,
-  `expense` decimal(10,2) NOT NULL,
-  `grandtotal` decimal(10,2) NOT NULL,
-  `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `admin`
 --
 
@@ -51,37 +36,6 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`adminID`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `expense`
---
-
-CREATE TABLE IF NOT EXISTS `expense` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `amount` decimal(10,2) NOT NULL,
-  `category` varchar(100) NOT NULL,
-  `paymentmethod` varchar(100) NOT NULL,
-  `description` varchar(255) NOT NULL,
-  `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `income`
---
-
-CREATE TABLE IF NOT EXISTS `income` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `amount` decimal(10,2) NOT NULL,
-  `category` varchar(100) NOT NULL,
-  `description` varchar(255) NOT NULL,
-  `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -103,6 +57,58 @@ CREATE TABLE IF NOT EXISTS `user` (
   UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 COMMIT;
+
+--
+-- Table structure for table `expense`
+--
+
+CREATE TABLE IF NOT EXISTS `expense` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `amount` decimal(10,2) NOT NULL,
+  `category` varchar(100) NOT NULL,
+  `paymentmethod` varchar(100) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `userID` int(11),
+  PRIMARY KEY (`ID`),
+  FOREIGN KEY (`userID`) REFERENCES `user`(`userID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `accountsummary`
+--
+
+CREATE TABLE IF NOT EXISTS `accountsummary` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `income` decimal(10,2) NOT NULL,
+  `expense` decimal(10,2) NOT NULL,
+  `grandtotal` decimal(10,2) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `userID` int(11),
+  PRIMARY KEY (`ID`),
+  FOREIGN KEY (`userID`) REFERENCES `user` (`userID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `income`
+--
+
+CREATE TABLE IF NOT EXISTS `income` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `amount` decimal(10,2) NOT NULL,
+  `category` varchar(100) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `userID` int(11),
+  PRIMARY KEY (`ID`),
+  FOREIGN KEY (`userID`) REFERENCES `user` (`userID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

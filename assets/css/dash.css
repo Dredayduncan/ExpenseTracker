@@ -3,6 +3,11 @@
     
 }
 
+svg:hover {
+    cursor: pointer;
+    background-color: orange;
+}
+
 #add-button {
     width: 70px;
     height: 70px;
@@ -34,4 +39,8 @@
     font-family:'Archivo black'; 
     border:none; 
 
+}
+
+.fixed {
+    position: fixed;
 }

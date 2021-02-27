@@ -1,0 +1,37 @@
+#util1:hover,#util2:hover {
+    background-color: #DCDCDC;
+    
+}
+
+#add-button {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+    
+    position:relative;
+    left: 85%;
+    margin-top: 0.5%;
+ 
+}
+
+#scan-button {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+    
+    position:relative;
+    left: 85%;
+    margin-top: 10%;
+ 
+}
+
+.username{
+    background:transparent ; 
+    color:#ffffff; 
+    font-size:20px; 
+    font-family:'Archivo black'; 
+    border:none; 
+
+}

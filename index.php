@@ -10,95 +10,94 @@
     <!-- <link rel="stylesheet" type="text/css" href="styling.css"> -->
     <style>
       *{
-            margin: 0;
-            padding:0;
-            font-family: "Century Gothic";
-        }
+    margin: 0;
+    padding:0;
+    font-family: "Century Gothic";
+}
 
-        header{
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(assets/img/expenseimage.jpeg);
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-        }
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(assets/img/expenseimage.jpeg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
 
-        ul{
-            float:right;
-            list-style-type: none;
-            margin-top:25px;
-        }
+ul{
+    float:right;
+    list-style-type: none;
+    margin-top:25px;
+}
 
-        ul li{
-            display: inline-block ;
-        }
+ul li{
+    display: inline-block ;
+}
 
-        ul li a{
-            text-decoration: none;
-            color: white;
-            padding: 5px 20px;
-            border: 1px solid transparent;
-            transition: 0.6s ease;
-        }
+ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
 
-        ul li a:hover{
-            background-color: white;
-            color: black;
-        }
+ul li a:hover{
+    background-color: white;
+    color: black;
+}
 
-        ul li.active a{
-            background-color: white;
-            color: black;
-        }
+ul li.active a{
+    background-color: white;
+    color: black;
+}
 
-        .logo img{
-            margin-top: 10px;
-            float: left;
-            width: 120px;
-            height: 90px;
-        }
+.logo img{
+    margin-top: 10px;
+    float: left;
+    width: 120px;
+    height: 90px;
+}
 
-        .main{
-            max-width: 1200px;
-            margin: auto;
-        }
+.main{
+    max-width: 1200px;
+    margin: auto;
+}
 
-        .title{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-        }
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 
-        .title h1{
-            color: white;
-            font-size: 60px;
-            width: 120%;
-        }
+.title h1{
+    color: white;
+    font-size: 60px;
+}
 
-        .button{
-            position: absolute;
-            top: 60%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            
-        }
+.button{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
 
-        .btn{
-            border: 1px solid white;
-            padding: 10px 30px;
-            color: white;
-            text-decoration: none;
-            transition: 0.6s ease;
-        }
+.btn{
+    border: 1px solid white;
+    padding: 10px 30px;
+    color: white;
+    text-decoration: none;
+    transition: 0.6s ease;
+}
 
-        .btn:hover{
-            background-color: white;
-            color: black;
-        }
+.btn:hover{
+    background-color: white;
+    color: black;
+}
 
     </style>
 
-    <title>xPense Tracker</title>
+    <title> </title>
   </head>
   <body>
 

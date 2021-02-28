@@ -11,11 +11,16 @@ def img2text(source):
     return str(text)
 
 def imgInfo(text):
-    receipt = {}
+    # receipt = {}
 
     splits = text.splitlines()
-    orgName = splits[0] + '' + splits[1]
-    receipt['name'] = orgName
+    # orgName = splits[0] + '' + splits[1]
+    # total = r''
+    # desc = ""
+    # for i in splits:
+
+    # tot = re.split(r'total', text.lower())
+    # receipt['name'] = orgName
 
     return splits
 

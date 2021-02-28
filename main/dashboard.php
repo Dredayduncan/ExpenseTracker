@@ -89,7 +89,7 @@
 </div>
 <!-- Content with cards -->
 <!--                                              FIRST ROW                                   -->
-<div class="card text-center shadow rounded container  " style="max-width:64%; margin-top:-6.2%;">
+<div class="card text-center shadow rounded container " style="max-width:64%; margin-top:-6.2%;">
 
 
           <div class="card-header lead bg-dark text-white font-weight-bolder container d-flex justify-content-around " style="max-width:100%;">

@@ -107,7 +107,8 @@ ul li.active a{
           <h1>Welcome to the ExpenseTracker </h1>
       </div>
 
-      <div class=" button justify-content-around">
+      <div class=" button container d-flex justify-content-around">
+        <a href="verification/LogIn_admin.php" class="btn">Log in as admin</a>
           <a href="verification/LogIn.php" class="btn">Log In</a>
           <a href="verification/SignUp.php" class="btn">Sign Up</a>
           

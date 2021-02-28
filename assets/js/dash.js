@@ -55,6 +55,7 @@ $('#editForm').on('click', function(){
     var lim = parseInt($('#dailylimit').html().slice(3));
 
     if ((amount + total) > lim ){
+        $("#limit_error_ed").css("display", "block");
         return false;
     }
 });
@@ -65,6 +66,7 @@ $('#addForm').on('click', function(){
     var lim = parseInt($('#dailylimit').html().slice(3));
 
     if ((amount + total) > lim ){
+        $("#limit_error").css("display", "block");
         return false;
     }
 });

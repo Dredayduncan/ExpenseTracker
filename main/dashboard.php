@@ -77,12 +77,22 @@
       </div>
   </div>
 
-
-
+ 
+  <div class="card shadow border-dark" style= "max-width:320px; max-height:100%; margin-left:0.5%;">
+  <div class="card-body">
+  <p class=font-weight-bolder> Filter By : </p>
+  <form action="">
+      <input type="date" id="event-date" name="event-date" class="form-control">
+  </form>
+  
+  </div>
+</div>
 <!-- Content with cards -->
 <!--                                              FIRST ROW                                   -->
-<div class="card text-center shadow rounded container " style="max-width:64%;">
-          <div class="card-header lead bg-dark text-white font-weight-bolder container d-flex justify-content-around ">
+<div class="card text-center shadow rounded container  " style="max-width:64%; margin-top:-6.2%;">
+
+
+          <div class="card-header lead bg-dark text-white font-weight-bolder container d-flex justify-content-around " style="max-width:100%;">
             <h5>Total Amount Spent</h5>
             <h5></h5>
             <h5>Daily Limit</h5>
@@ -235,6 +245,7 @@
 
   <form id='formAdd' class=" text-center mt-5  border-light p-5  rounded"style="width: 100%;"  action="control.php" method="POST" id="Add expense">
     
+    <p id = "limit_error" style = "color : red; font-size:20px; display:none; "> You will exceed your limit </p>
       <div class="form-group row no-gutters mb-4">
           <label class="col-md-4 col-form-label text-left" for="amount">Amount:</label>
           <div class="col-md-8">
@@ -308,7 +319,8 @@
 
         <div class="modal-body">
         <form id='formEdit' class=" text-center mt-5  border-light p-5 rounded" action='control.php' style="width: 100%;" method="POST" id="Add expense">
-          <div class="form-group row no-gutters mb-4">
+        <p id = "limit_error_ed" style = "color : red; font-size:20px; display:none; "> You will exceed your limit </p>
+        <div class="form-group row no-gutters mb-4">
               <label class="col-md-4 col-form-label text-left" for="amount">Amount:</label>
               <div class="col-md-8">
                   <input type="number" id="amount" name="amount" class="form-control">

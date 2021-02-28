@@ -16,5 +16,67 @@
     font-size: 12px;
 }
 
+/* // Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap */
 
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 300px) { 
+    .w-100{
+        width:200%!important;
+        height: 100% ;
+        margin-left: -50%;
+        margin-top:-30%;
+    }
+
+    .w-100 #Sign-up-form{
+        width:50%!important;
+        height: 181%; 
+        margin-left: 20px;
+    }
+ }
+
+ @media (min-width: 375px) { 
+    .w-100{
+        width: 200%!important;
+        height: 100% ;
+        margin-left: -50%;
+        margin-top:-20%;
+    }
+
+    .w-100 #Sign-up-form{
+        width: 50%!important;
+        height: 165%; 
+        margin-left: 20px;
+    }
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .w-100{
+        width: 100%!important;
+        height: 50% ;
+        margin-left: -17%;
+        margin-top:8%;
+    }
+    .w-100 form{
+        width: 500px!important;
+    }
+
+    .w-100 #Sign-up-form{
+        height: 160%; 
+        margin-left: 175px;
+    }
+    
+
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+ }
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+ }
 

@@ -13,7 +13,7 @@ svg:hover {
     height: 70px;
 
     border-radius: 50%;
-    
+    z-index: 9999999;
     position:relative;
     left: 85%;
     margin-bottom: -5%;
@@ -27,7 +27,7 @@ svg:hover {
     height: 70px;
 
     border-radius: 50%;
-    
+    z-index: 9999999;
     position:relative;
     left: 85%;
     margin-bottom: -10%;
@@ -45,4 +45,123 @@ svg:hover {
 
 }
 
+/* * // Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap */ 
+
+/* // Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 300px) { 
+
+    .filter{
+        margin-left: 2%!important;
+        width: 95%;
+    }
+
+    #display-amount {
+        max-width: 90%!important;
+        margin-left: 5%;
+        margin-top: 3%!important;
+    }
+
+    #display-amount #display_am h5, #display-amount #display_am h6{
+        font-size: 25px!important;
+    }
+
+    #expenseCards{
+        margin-top: -3%!important;
+        max-width: 95%!important;
+        margin-left: 2%;
+    }
+
+    
+ }
+
+ @media (min-width: 375px) { 
+     body{
+        overflow-y: scroll;
+     }
+
+    .filter{
+        margin-left: 10%!important;
+    }
+
+    #display-amount {
+        max-width: 78%!important;
+        margin-left: 10%;
+        margin-top: 3%!important;
+    }
+
+    #display-amount #display_am h5, #display-amount #display_am h6{
+        font-size: 25px!important;
+    }
+
+    #expenseCards{
+        max-width: 95%!important;
+        margin-left: 2%;
+    }
+    
+ }
+
+ /* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .filter{
+        margin-left: 3%!important;
+    }
+
+    #display-amount {
+        max-width: 50%!important;
+        margin-left: 20%;
+        margin-top: -5.5%!important;
+    }
+
+    #display-amount #display_am h5, #display-amount #display_am h6{
+        font-size: 50px!important;
+    }
+
+    #expenseCards{
+        max-width: 95%!important;
+        margin-left: 2%;
+        margin-top: 0%!important;
+        height: 65vh!important;
+    }
+
+    #add-button {
+        margin-top: 11%;
+    }
+
+    #scan-button {
+        margin-top: -7%;
+    }
+ }
+
+ /* LOGIN SIGNUP LOGIN AS ADMIN */
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .w-100{
+        width: 100%!important;
+        height: 50% ;
+        margin-left: -17%;
+        margin-top:8%;
+    }
+    
+
+
+    
+
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .w-100{
+        width: 100%!important;
+        height: 50% ;
+        margin-left: -17%;
+        margin-top:15%!important;
+    }
+ }
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+ }
 

@@ -11,21 +11,21 @@
       <title>Log In</title>
       <link href="../assets/css/style.css" type="text/css" rel="stylesheet">
   </head>
-  <body class = "container-fluid mt-5"  style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../assets/img/expenseimage.jpeg); height: 100vh; background-size: cover; background-position: center;">
+  <body class = "container-sm mt-5"  style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../assets/img/expenseimage.jpeg); height: 100vh; background-size: cover; background-position: center;">
 
-    <div class=" container-fluid justify-content-center d-flex w-100 p-3 ">
+    <div class=" form-div container justify-content-center d-flex w-100 p-3 ">
         
         <form class=" text-center bg-white mt-5 border border-light p-5 shadow-lg rounded" style="width: 35%;" action="loginBack.php" method="POST" id="Sign-in-form">
             
            
             
-            <p class="h4 mb-4">Log In</p>
-            <p class="mb-4"><em></em></p>
+            <div class="container"><p class="h4 mb-4">Log In</p></div>
+            
 
             
              <div class="row no-gutters"><div id="error-block-email" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
               <div class="form-group row no-gutters mb-4">
-                  <label class="col-md-4 col-form-label text-left" for="email">Email address:</label>
+                  <label class="col-md-4 col-form-label text-left" for="email">Email:</label>
                   <div class="col-md-8">
                       <input type="email" id="email" name="email" class="form-control">
                   </div>

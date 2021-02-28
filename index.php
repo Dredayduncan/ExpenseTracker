@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" type="text/css" href="styling.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../assets/css/index.css"> -->
     <style>
       *{
     margin: 0;
@@ -94,6 +94,29 @@ ul li.active a{
     background-color: white;
     color: black;
 }
+.title {
+  @include font-size(4rem);
+}
+
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) { 
+    .container-sm{
+        font-size:50px;
+    }
+
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+}
+
+
+
 
     </style>
 
@@ -102,9 +125,25 @@ ul li.active a{
   <body>
 
     <header>
+
+            <div class="container title " >
+           <div class="container-sm text-center"> <h1>Welcome to the xPense Tracker </h1> </div>
+        <div class="row mt-5 ">
+            <div class="col-sm mb-3  ">
+            <div class="container d-flex justify-content-center"><a href="verification/LogIn_admin.php" class="btn">Log in as admin</a></div>
+            </div>
+            <div class="col-sm mb-3 ">
+            <div class="container d-flex justify-content-center"><a href="verification/LogIn.php" class="btn">Log In</a></div>
+            </div>
+            <div class="col-sm mb-3 ">
+            <div class="container d-flex justify-content-center"><a href="verification/SignUp.php" class="btn">Sign Up</a></div>
+            
+            </div>
+        </div>
+        </div>
      
-      <div class="title">
-          <h1>Welcome to the ExpenseTracker </h1>
+      <!-- <div class="title">
+          
       </div>
 
       <div class=" button container d-flex justify-content-around">
@@ -113,7 +152,7 @@ ul li.active a{
           <a href="verification/SignUp.php" class="btn">Sign Up</a>
           
 
-      </div>
+      </div> -->
   </header>
 
 
@@ -136,11 +175,11 @@ ul li.active a{
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 
-      <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+      <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-      -->
+     
     
 
 

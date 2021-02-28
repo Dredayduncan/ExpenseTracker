@@ -35,16 +35,12 @@
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item active">
           <a class="nav-link" href="Dashboard.php">Overview <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="stats.php"> Statistics</a>
-        </li>
-        
+        </li>        
       </ul>
 
       
       <div class="card d-flex flex-wrap align-content-center username" >
-        <div class="container">
+        <div class="container mr-5">
           Hi, <?php echo $_SESSION['logUname']; ?>!
         </div> 
       </div>
@@ -78,18 +74,20 @@
   </div>
 
  
-  <div class="card shadow border-dark" style= "max-width:320px; max-height:100%; margin-left:0.5%;">
-  <div class="card-body">
-    <p class=font-weight-bolder> Filter By : </p>
-    <form action="">
-        <input type="date" id="event-date" name="event-date" class="form-control">
-    </form>
-  
-  </div>
-</div>
+
+  <div class=" filter card shadow border-dark" style= "max-width:320px; max-height:100%; margin-left:0.5%;" >
+      <div class="card-body" id = "filterBox">
+        <p class=font-weight-bolder> Filter By : </p>
+        <form action="">
+            <input type="date" id="event-date" name="event-date" class="form-control">
+        </form>
+    
+      </div>
+    </div>
+ 
 <!-- Content with cards -->
 <!--                                              FIRST ROW                                   -->
-<div class="card text-center shadow rounded container " style="max-width:64%; margin-top:-6.2%;">
+<div class="card text-center shadow rounded container " style="max-width:64%; margin-top:-6.2%;" id="display-amount">
 
 
           <div class="card-header lead bg-dark text-white font-weight-bolder container d-flex justify-content-around " style="max-width:100%;">
@@ -97,7 +95,7 @@
             <h5></h5>
             <h5>Daily Limit</h5>
           </div>
-          <div class="card-body d-flex justify-content-around">
+          <div class="card-body d-flex justify-content-around" id="display_am">
           
             <h5 id="total" class="card-title font-weight-lighter " style="font-size:50px;"></h5>
             <h5 class="card-title border-right border-dark" style="font-size:50px;"></h5>
@@ -174,7 +172,7 @@
       ?>
   </div>
              
-  <div id="scan-button" class="fixed-bottom d-flex justify-content-center align-items-center shadow bg-warning" data-toggle="modal" data-target="#scanexpense">
+  <div id="scan-button" class="btn fixed-bottom d-flex justify-content-center align-items-center shadow bg-warning" data-toggle="modal" data-target="#scanexpense">
 
   <span>
   <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-upc-scan" viewBox="0 0 16 16">

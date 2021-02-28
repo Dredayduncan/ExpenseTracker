@@ -80,10 +80,10 @@
  
   <div class="card shadow border-dark" style= "max-width:320px; max-height:100%; margin-left:0.5%;">
   <div class="card-body">
-  <p class=font-weight-bolder> Filter By : </p>
-  <form action="">
-      <input type="date" id="event-date" name="event-date" class="form-control">
-  </form>
+    <p class=font-weight-bolder> Filter By : </p>
+    <form action="">
+        <input type="date" id="event-date" name="event-date" class="form-control">
+    </form>
   
   </div>
 </div>
@@ -104,13 +104,13 @@
             <h6 id="dailylimit" class="card-title font-weight-lighter " style="font-size:50px;">GHS<?php echo $_SESSION['lim']; ?></h6>
           </div>
       </div>
-  <div class="container mt-4 " style="height: 500px; overflow-y: scroll;  overflow-x: hidden; max-width:65%;">
+  <div id='expenseCards' class="container mt-4 " style="height: 500px; overflow-y: scroll;  overflow-x: hidden; max-width:65%;">
       
         
       <?php
 
         // write query 
-        $sql = "SELECT * FROM expense WHERE userID='".$_SESSION['id']."'";
+        $sql = "SELECT * FROM expense WHERE userID='".$_SESSION['id']."' and date(timestamp) = '".$_SESSION["date"]."'";
 
         // execute query
         $result = mysqli_query($conn, $sql);

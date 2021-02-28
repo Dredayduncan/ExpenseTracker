@@ -17,6 +17,10 @@
         case 'admin':
             adminInfo($conn);
             break;
+        case 'delete';
+            $info = explode("-", $_GET['record']);
+            remove($conn, $info[0], $info[1]);
+            break;
         default:
             break;
     }
@@ -36,9 +40,11 @@
             echo '<thead style ="position: sticky; ">
                 <tr>';
             while($data = mysqli_fetch_array($checkHead)){
-                echo '
+                if ($data['COLUMN_NAME'] != 'password'){
+                    echo '
                     <th class="text-center">'.$data['COLUMN_NAME'].'</th>
-                ';
+                    ';
+                }
             }
 
             echo '</tr>
@@ -59,15 +65,22 @@
                         <td class="txt-oflo">'.$data['username'].'</td>
                         <td class="txt-oflo">'.$data['phonenumber'].'</td>
                         <td class="txt-oflo">'.$data['email'].'</td>
-                        <td class="txt-oflo text-break">'.$data['password'].'</td>
                         <td class="txt-oflo text-success">GHS'.$data['dailylimit'].'</td>
-                        <td class="txt-oflo"><a class="btn btn-success" data-toggle="modal" data-target="#deleteuser"  
+                        <td id="user-'.$data['userID'].'" class="txt-oflo rm"><a class="btn btn-success" data-toggle="modal" data-target="#deleteuser"  
                         role="button" style="background-color: #9A2005;">Remove</a>
                         </td>
                     </tr>';
             }
 
             echo '</tbody>';
+            echo '<script> 
+                var id = "";
+
+                $("td").on("click", function(){
+                    id = $(this).attr("id");
+            
+                });                
+            </script>';
         }    
     }
 
@@ -133,9 +146,12 @@
             echo '<thead style ="position: sticky; ">
                 <tr>';
             while($data = mysqli_fetch_array($checkHead)){
-                echo '
+                if ($data['COLUMN_NAME'] != 'password'){
+                    echo '
                     <th class="text-center">'.$data['COLUMN_NAME'].'</th>
-                ';
+                    ';
+                }
+                
             }
 
             echo '</tr>
@@ -153,14 +169,21 @@
                         <td class="text-center">'.$data['adminID'].'</td>
                         <td class="txt-oflo">'.$data['username'].'</td>
                         <td class="txt-oflo">'.$data['email'].'</td>
-                        <td class="txt-oflo">'.$data['password'].'</td>
-                        <td class="txt-oflo"><a class="btn btn-success" data-toggle="modal" data-target="#deleteuser"  
+                        <td id="admin-'.$data['adminID'].'" class="txt-oflo rm"><a class="btn btn-success" data-toggle="modal" data-target="#deleteuser"  
                         role="button" style="background-color: #9A2005;">Remove</a>
                         </td>
                     </tr>';
             }
 
             echo '</tbody>';
+            echo '<script> 
+                var id = "";
+
+                $("td").on("click", function(){
+                    id = $(this).attr("id");
+            
+                });                
+            </script>';
         }
     }
     
@@ -252,5 +275,21 @@
             echo '</tbody>';
         }    
             
+    }
+
+    // Remove from database
+    function remove($conn, $table, $id){
+        //Insert records to database
+        $query = "DELETE from $table WHERE ".$table."ID = '".$id."'";
+            
+        // execute query
+        $result = mysqli_query($conn, $query);
+
+        // Check if query is executed
+        if ($result){
+            header("Location: admin.php?notice=Record has been deleted successfully!");
+        }else{
+            die("ERROR: Could not able to execute $result. " . mysqli_error($conn));
+        }
     }
 ?>

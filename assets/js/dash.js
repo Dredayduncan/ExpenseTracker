@@ -1,3 +1,12 @@
+$("#event-date").val(new Date().toISOString().substr(0, 10));
+
+// filter expenses by date
+$('#event-date').change(function(){
+    $.get('filter.php', {menu: 'theDate', date: $('#event-date').val()}, function(data){
+        $('#expenseCards').html(data);
+    });
+});
+
 var addBtn = document.getElementById('add-button');
 
 $('#add-button').hover(

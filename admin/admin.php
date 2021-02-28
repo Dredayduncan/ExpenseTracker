@@ -205,43 +205,15 @@
                                 </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form class=" text-center  p-5  rounded" action="#"  method="POST" id="Sign-up-form">
-            
-           
-            
-                                        
+                                    <form class=" text-center  p-5  rounded" action="../verification/addAdmin.php"  method="POST" id="Sign-up-form">
+
                                         <p class="mb-4"><em></em></p>
-                                    
-                                        <div class="row no-gutters"><div id="error-block-fname" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
-                                          <div class="form-group row no-gutters mb-4">
-                                              <label class="col-md-4 col-form-label text-left " for="fname">First Name:</label>
-                                              <div class="col-md-8">
-                                                    <input  type="text" id="fname" name="fname" class="form-control">
-                                              </div>
-                                          </div>
-                                    
-                                          <div class="row no-gutters"><div id="error-block-lname" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
-                                          <div class="form-group row no-gutters mb-4">
-                                              <label class="col-md-4 col-form-label text-left " for="lname">Last Name:</label>
-                                              <div class="col-md-8">
-                                                    <input  type="text" id="lname" name="lname" class="form-control">
-                                              </div>
-                                          </div>
-                                    
                                         
                                         <div class="row no-gutters"><div id="error-block-uname" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
                                           <div class="form-group row no-gutters mb-4">
                                               <label class="col-md-4 col-form-label text-left " for="uname">Username:</label>
                                               <div class="col-md-8">
                                                     <input  type="text" id="uname" name="uname" class="form-control">
-                                              </div>
-                                          </div>
-                                    
-                                          <div class="row no-gutters"><div id="error-block-number" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
-                                          <div class="form-group row no-gutters mb-4">
-                                              <label class="col-md-4 col-form-label text-left " for="number">Phone Number:</label>
-                                              <div class="col-md-8">
-                                                    <input  type="text" id="number" name="number" class="form-control">
                                               </div>
                                           </div>
                                     
@@ -252,15 +224,6 @@
                                                   <input type="email" id="email" name="email" class="form-control">
                                               </div>
                                           </div>
-                                    
-                                          <div class="row no-gutters"><div id="error-block-limit" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
-                                          <div class="form-group row no-gutters mb-4">
-                                              <label class="col-md-4 col-form-label text-left" for="limit">Daily Limit:</label>
-                                              <div class="col-md-8">
-                                                  <input type="number" id="limit" name="limit" class="form-control">
-                                              </div>
-                                          </div>
-                                    
                                         
                                           <div class="row no-gutters"><div id="error-block-password" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
                                         <div class="form-group row no-gutters mb-4">
@@ -309,7 +272,7 @@
                                 </div>
                                 <div class="modal-footer justify-content-center">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                                <button id='confirmDelete' name='confam' type="button" class="btn btn-primary">Yes</button>
+                                <button id='delete' name='confam' type="button" class="btn btn-primary">Yes</button>
                                 </div>
                             </div>
                     </div>

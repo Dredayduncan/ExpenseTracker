@@ -5,10 +5,8 @@ $('.sidebar-nav ul li').on('click', function(){
         cont.innerHTML = '';
     }
 
-    // console.log(this.id);
     //Populate tableInfo div
     $.get('adminControl.php', { menu: this.id }, function(data){
-        console.log(this.id);
         $('#tab').append(data); //populate table with whatever data is returned
     });
 
@@ -16,3 +14,9 @@ $('.sidebar-nav ul li').on('click', function(){
 });
 
 $('#user').click();
+
+$('#delete').on('click', function(){
+    $.get('adminControl.php', {menu: 'delete', record: id}, function(data){
+        location.reload();
+    });
+});

@@ -32,6 +32,7 @@
         $_SESSION['logUname'] = $user['username'];
         $_SESSION['id'] = $user['userID'];
         $_SESSION['lim'] = $user['dailylimit'];
+        $_SESSION['date'] = date("Y-m-d");
 
         //Reroute to email page
         header("Location: ../main/dashboard.php");

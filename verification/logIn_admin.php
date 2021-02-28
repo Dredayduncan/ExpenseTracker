@@ -12,11 +12,12 @@
       <title>Log In</title>
       <link href="../assets/css/style.css" type="text/css" rel="stylesheet">
   </head>
+  
   <body class = "container-fluid mt-5"  style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../assets/img/expenseimage.jpeg); height: 100vh; background-size: cover; background-position: center;">
 
     <div class=" container-fluid justify-content-center d-flex w-100 p-3 ">
         
-        <form class=" text-center bg-white mt-5 border border-light p-5 shadow-lg rounded" style="width: 35%;" action="#" method="POST" id="Sign-in-form">
+        <form class=" text-center bg-white mt-5 border border-light p-5 shadow-lg rounded" style="width: 35%;" action="adminLoginBack.php" method="POST" id="Sign-in-form">
             
            
             
@@ -31,12 +32,6 @@
                       <input type="email" id="email" name="email" class="form-control">
                   </div>
               </div>
-
-
-            
-           
-           
-
             
               <div class="row no-gutters"><div id="error-block-password" class="error-block-message col-md-8 offset-md-4 text-left"></div></div>
             <div class="form-group row no-gutters mb-4">
@@ -52,7 +47,7 @@
               <button class="btn btn-success btn-block btn-info my-4 mx-auto "  name="login" type="submit">Log in</button>
           </div>
             
-            <p>Not an admin ? Click <a class="a" href="../index.php">here</a> to sign in as a user!</p>
+            <p>Not an admin ? Click <a class="a" href="login.php">here</a> to sign in as a user!</p>
             
         </form>
         

@@ -37,7 +37,7 @@
           <a class="nav-link" href="Dashboard.php">Overview <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"> Statistics</a>
+          <a class="nav-link" href="stats.php"> Statistics</a>
         </li>
         
       </ul>

@@ -4,10 +4,7 @@ const form = document.getElementById('Sign-in-form'); // get the form
 const Email = form.elements["email"];
 const password = form.elements["pword"];
 
-
-
 // Get all error blocks
-
 const error_email = document.getElementById('error-block-email');
 const error_password = document.getElementById('error-block-password');
 const error_password_strength = document.getElementById('error-block-password');
